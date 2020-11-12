@@ -16,6 +16,7 @@
    */
   function init(data) {
     let imageWrapper = document.getElementById('image-wrapper');
+	let wallId = imageWrapper.getAttribute('data-wall-id');
     let sessionId = randomString() + randomString();
     imageWrapper.getElementsByTagName('img')[0].addEventListener('click', updateImage);
 
@@ -29,7 +30,7 @@
 
       for (let i=length; i < 5; i++) {
         let imgEl = document.createElement('img');
-        imgEl.setAttribute('src', DATA_URL + '?action=randomImage&session_id=' + sessionId + '&anticache=' + randomString());
+        imgEl.setAttribute('src', DATA_URL + '?action=randomImage&session_id=' + sessionId + '&anticache=' + randomString() + (wallId != null ? '&wall_id=' + wallId : ''));
         imgEl.style.display = 'none';
 
         imgEl.addEventListener('click', updateImage);
