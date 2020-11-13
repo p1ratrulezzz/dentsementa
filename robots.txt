@@ -4,4 +4,4 @@ Allow: /index.html
 Allow: /humans.txt
 Allow: /CNAME
 
-Sitemap: https://xn--80abale1ag6ax6e3a.xn--p1ai/sitemap.xml
+Sitemap: https://dentsementa.com/sitemap.xml
